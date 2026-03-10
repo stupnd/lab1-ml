@@ -1,0 +1,9 @@
+services:
+  ml-api:
+    build: .
+    container_name: ml_sentiment_api
+    ports:
+      - "8080:8080"
+    environment:
+      - PRODUCTION=true
+    restart: unless-stopped
